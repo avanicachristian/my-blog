@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Strength of an Independent Woman in Faith</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Strength of an Independent Woman in Faith</h1>
+    </header>
+
+    <main>
+        <p>Balancing independence with Christian values is a challenge...</p>
+
+        <section class="comments">
+            <h3>Comments</h3>
+            <form id="comment-form">
+                <input type="text" id="comment" placeholder="Write a comment..." required>
+                <button type="submit">Post</button>
+            </form>
+            <ul id="comment-list"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Faith & Independence Blog</p>
+    </footer>
+
+    <script>
+        document.getElementById('comment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let comment = document.getElementById('comment').value;
+            let commentList = document.getElementById('comment-list');
+            let newComment = document.createElement('li');
+            newComment.textContent = comment;
+            commentList.appendChild(newComment);
+            document.getElementById('comment').value = "";
+        });
+    </script>
+</body>
+</html>
